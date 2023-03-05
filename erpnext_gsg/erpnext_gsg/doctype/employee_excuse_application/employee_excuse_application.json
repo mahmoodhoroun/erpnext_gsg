@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-03-05 23:37:53.054490",
+ "creation": "2023-03-05 23:55:55.126785",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -14,7 +14,8 @@
   "from_time",
   "to_time",
   "hours",
-  "reason"
+  "reason",
+  "amended_from"
  ],
  "fields": [
   {
@@ -60,11 +61,21 @@
    "fieldname": "reason",
    "fieldtype": "Small Text",
    "label": "Reason"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Excuse Application",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-03-05 23:40:40.985998",
+ "modified": "2023-03-05 23:58:01.742938",
  "modified_by": "Administrator",
  "module": "Erpnext Gsg",
  "name": "Employee Excuse Application",
