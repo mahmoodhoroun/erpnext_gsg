@@ -33,6 +33,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "employee.department",
    "fieldname": "department",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -74,7 +75,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-06 14:07:56.307802",
+ "modified": "2023-03-06 21:55:41.788556",
  "modified_by": "Administrator",
  "module": "Erpnext Gsg",
  "name": "Employee Excuse Application",
