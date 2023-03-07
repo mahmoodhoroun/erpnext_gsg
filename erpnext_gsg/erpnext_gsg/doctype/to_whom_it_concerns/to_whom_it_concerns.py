@@ -16,5 +16,5 @@ def get_salary_slips(employee):
 		fields=['base_gross_pay', 'posting_date'],
 		order_by='posting_date desc',
 		)
-	return last_salary_slip
+	return last_salary_slip[0].base_gross_pay
 

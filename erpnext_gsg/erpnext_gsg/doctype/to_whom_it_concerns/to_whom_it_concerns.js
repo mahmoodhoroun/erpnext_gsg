@@ -16,7 +16,7 @@ frappe.ui.form.on('To Whom It Concerns', {
 				employee:frm.doc.employee,
 			},
 			callback: (r)=>{
-				frm.doc.salary = r.message[0].base_gross_pay
+				frm.doc.salary = r.message
 				frm.refresh()
 			}
 
