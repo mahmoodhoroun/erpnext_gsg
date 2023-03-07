@@ -51,6 +51,9 @@ def get_conditions(filters):
 	if filters.get("status"):
 		conditions += " and so.status in %(status)s"
 
+	if filters.get("from_time") and filters.get("to_time"):
+		conditions += " and so.sales_order_time between %(from_time)s and %(to_time)s"
+
 	return conditions
 
 def get_data(conditions, filters):
@@ -72,7 +75,8 @@ def get_data(conditions, filters):
 			(soi.base_amount - (soi.billed_amt * IFNULL(so.conversion_rate, 1))) as pending_amount,
 			soi.warehouse as warehouse,
 			so.company, soi.name,
-			soi.description as description
+			soi.description as description,
+			so.sales_order_time
 		FROM
 			`tabSales Order` so,
 			`tabSales Order Item` soi

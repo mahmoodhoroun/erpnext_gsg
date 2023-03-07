@@ -63,10 +63,18 @@ frappe.query_reports["Sales Order Analysis-2"] = {
 			} 
 		},
 		{
-			"fieldname": "sales_order_time",
-			"label": __("Sales order time"),
+			"fieldname": "from_time",
+			"label": __("From Time"),
 			"fieldtype": "Time",
 			"width": "80",
+			"reqd": 1,
+		},
+		{
+			"fieldname": "to_time",
+			"label": __("To Time"),
+			"fieldtype": "Time",
+			"width": "80",
+			"reqd": 1,
 		},
 		{
 			"fieldname": "group_by_so",
