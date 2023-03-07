@@ -8,9 +8,9 @@ def create_stock_entry(doc, event):
         return
         
     from erpnext.stock.doctype.material_request.material_request import make_stock_entry
-    stentry = make_stock_entry(doc.name)
-    stentry.insert()
-    stentry.submit()
+    new_stock_entry = make_stock_entry(doc.name)
+    new_stock_entry.insert()
+    new_stock_entry.submit()
     #     stock_entry_doc = frappe.new_doc("Stock Entry")
     #     stock_entry_doc.stock_entry_type = doc.material_request_type
     #     stock_entry_doc.from_warehouse = doc.set_from_warehouse
