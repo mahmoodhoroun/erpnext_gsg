@@ -118,6 +118,9 @@ doctype_js = {"Payment Entry" : "public/js/payment_entry.js"}
 doc_events = {
 	"Material Request": {
 		"on_submit": "erpnext_gsg.erpnext_gsg.event.material_request_event.create_stock_entry",
+	},
+    "Attendance": {
+    	"validate": "erpnext_gsg.erpnext_gsg.event.attendance_evnt.clac_hours"
 	}
 }
 
