@@ -121,6 +121,10 @@ doc_events = {
 	},
     "Attendance": {
     	"validate": "erpnext_gsg.erpnext_gsg.event.attendance_evnt.clac_hours"
+	},
+    "Payment Entry": {
+		"before_insert" :"erpnext_gsg.erpnext_gsg.event.payment_entry_event.payment_entry_before_insert",
+		"on_update":"erpnext_gsg.erpnext_gsg.event.payment_entry_event.payment_entry_on_update"
 	}
 }
 
